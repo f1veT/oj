@@ -17,6 +17,7 @@ adminuser and passwd for your user</br>
 yum -y install git mysql-server mysql-devel</br>
 sudo service mysqld start</br>
 sudo mysqladmin -u root password root</br>
+cd /home</br>
 git clone https://github.com/knickersgod/oj.git</br>
 cd oj</br>
 chmod -R 777 *</br>
