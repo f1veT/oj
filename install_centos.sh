@@ -22,7 +22,7 @@ sudo  /usr/sbin/useradd -m -u 1536 judge
 
 #compile and install the core
 cd ../
-mv ./oj/php.init /etc/php.ini
+mv ./oj/php.ini /etc/php.ini
 mv ./oj/judged ./hustoj/trunk/core/judged/makefile
 mv ./oj/judge_client ./hustoj/trunk/core/judge_client/makefile
 cd ./hustoj/trunk/core
