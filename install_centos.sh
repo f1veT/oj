@@ -25,11 +25,9 @@ cd ../
 mv ./oj/php /etc/php.ini
 mv ./oj/judged ./oj/hustoj/trunk/core/judged/makefile
 mv ./oj/judge_client ./oj/hustoj/trunk/core/judge_client/makefile
-cd ./oj/hustoj/trunk/core
 sudo ./oj/hustoj/trunk/core/make.sh
-cd ../
 #install web and db
-sudo cp -R ./oj/hustoj/trunkweb $WEBBASE/JudgeOnline
+sudo cp -R ./oj/hustoj/trunk/web $WEBBASE/JudgeOnline
 sudo chmod -R 771 $WEBBASE/JudgeOnline
 sudo chown -R $APACHEUSER $WEBBASE/JudgeOnline
 sudo mysql -h localhost -u$DBUSER -p$DBPASS < db.sql
@@ -44,7 +42,7 @@ sudo    mkdir /home/judge/run0
 sudo    mkdir /home/judge/run1
 sudo    mkdir /home/judge/run2
 sudo    mkdir /home/judge/run3
-cd ./oj/hustoj/trunk//install/
+cd ./oj/hustoj/trunk/install/
 sudo cp java0.policy  judge.conf /home/judge/etc
 sudo chown -R judge /home/judge
 sudo chgrp -R $APACHEUSER /home/judge/data
