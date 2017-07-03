@@ -9,5 +9,5 @@ tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=954623886</br>
 Email：954623886@qq.com</br>
 安装完成后，注册用户并提升为管理员权限。</br>
 next 修改以下配置文件，扯句英文。0.0</br>
-#	chenge your /home/judge/etc/judge.conf </br>
-#	adminuser and passwd for your user</br>
+chenge your /home/judge/etc/judge.conf </br>
+adminuser and passwd for your user</br>
