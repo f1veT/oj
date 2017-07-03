@@ -24,6 +24,7 @@ sudo  /usr/sbin/useradd -m -u 1536 judge
 #compile and install the core
 cd ../
 mv ./oj/php /etc/php.ini
+mv ./oj/judge_client.cc ./oj/hustoj/trunk/core/judge_client/judge_client.cc
 mv ./oj/judged ./oj/hustoj/trunk/core/judged/makefile
 mv ./oj/judge_client ./oj/hustoj/trunk/core/judge_client/makefile
 cd ./oj/hustoj/trunk/core/judged
@@ -80,4 +81,3 @@ sudo ln -s /etc/init.d/judged /etc/rc2.d/S93judged
 sudo echo '/usr/bin/judged' > /etc/init.d/judged
 sudo /etc/init.d/judged start
 sudo /etc/init.d/httpd restart
-
