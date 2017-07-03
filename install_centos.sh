@@ -2,7 +2,9 @@
 #	chenge your /home/judge/etc/judge.conf 
 #	adminuser and passwd for your user
 #CENTOS/REDHAT/FEDORA WEBBASE=/var/www/html APACHEUSER=apache 
-
+#sudo yum install mysql-server mysql-devel
+#sudo service mysqld start
+#sudo mysqladmin -u root password root
 WEBBASE=/var/www/html
 APACHEUSER=apache
 DBUSER=root
