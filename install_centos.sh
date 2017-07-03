@@ -9,7 +9,7 @@ DBUSER=root
 DBPASS=root
 
 sudo yum -y update
-sudo yum -y install php httpd php-mysql  php-xml php-gd gcc-c++  mysql-devel php-mbstring glibc-static flex git fresh
+sudo yum -y install php httpd php-mysql  php-xml php-gd gcc-c++ mysql-server mysql-devel php-mbstring glibc-static flex git fresh
 sudo service mysqld start
 sudo mysqladmin -u root password root
 
@@ -22,14 +22,14 @@ sudo  /usr/sbin/useradd -m -u 1536 judge
 
 #compile and install the core
 cd ../
-mv ./oj/php.ini /etc/php.ini
-mv ./oj/judged ./hustoj/trunk/core/judged/makefile
-mv ./oj/judge_client ./hustoj/trunk/core/judge_client/makefile
-cd ./hustoj/trunk/core
-sudo ./make.sh
+mv ./oj/php /etc/php.ini
+mv ./oj/judged ./oj/hustoj/trunk/core/judged/makefile
+mv ./oj/judge_client ./oj/hustoj/trunk/core/judge_client/makefile
+cd ./oj/hustoj/trunk/core
+sudo ./oj/hustoj/trunk/core/make.sh
 cd ../
 #install web and db
-sudo cp -R web $WEBBASE/JudgeOnline
+sudo cp -R ./oj/hustoj/trunkweb $WEBBASE/JudgeOnline
 sudo chmod -R 771 $WEBBASE/JudgeOnline
 sudo chown -R $APACHEUSER $WEBBASE/JudgeOnline
 sudo mysql -h localhost -u$DBUSER -p$DBPASS < db.sql
@@ -44,6 +44,7 @@ sudo    mkdir /home/judge/run0
 sudo    mkdir /home/judge/run1
 sudo    mkdir /home/judge/run2
 sudo    mkdir /home/judge/run3
+cd ./oj/hustoj/trunk//install/
 sudo cp java0.policy  judge.conf /home/judge/etc
 sudo chown -R judge /home/judge
 sudo chgrp -R $APACHEUSER /home/judge/data
@@ -58,3 +59,4 @@ sudo ln -s /etc/init.d/judged /etc/rc2.d/S93judged
 sudo echo '/usr/bin/judged' > /etc/init.d/judged
 sudo /etc/init.d/judged start
 sudo /etc/init.d/httpd restart
+
