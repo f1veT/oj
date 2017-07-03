@@ -8,7 +8,6 @@ APACHEUSER=apache
 DBUSER=root
 DBPASS=root
 
-cd ../
 sudo yum -y update
 sudo yum -y install php httpd php-mysql mysql-server php-xml php-gd gcc-c++  mysql-devel php-mbstring glibc-static flex git fresh
 sudo /etc/init.d/mysqld start
