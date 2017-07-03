@@ -9,8 +9,9 @@ DBUSER=root
 DBPASS=root
 
 sudo yum -y update
-sudo yum -y install php httpd php-mysql mysql-server php-xml php-gd gcc-c++  mysql-devel php-mbstring glibc-static flex git fresh
-sudo /etc/init.d/mysqld start
+sudo yum -y install php httpd php-mysql  php-xml php-gd gcc-c++  mysql-devel php-mbstring glibc-static flex git fresh
+sudo service mysqld start
+sudo mysqladmin -u root password root
 
 sudo git clone https://github.com/zhblue/hustoj.git
 
@@ -57,4 +58,3 @@ sudo ln -s /etc/init.d/judged /etc/rc2.d/S93judged
 sudo echo '/usr/bin/judged' > /etc/init.d/judged
 sudo /etc/init.d/judged start
 sudo /etc/init.d/httpd restart
-
