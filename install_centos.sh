@@ -52,8 +52,8 @@ ln -s /usr/bin/sim_c /usr/bin/sim_cc
 sudo cp -R ./oj/hustoj/trunk/web $WEBBASE/JudgeOnline
 sudo chmod -R 771 $WEBBASE/JudgeOnline
 sudo chown -R $APACHEUSER $WEBBASE/JudgeOnline
-sudo mysql -h localhost -u$DBUSER -p$DBPASS < db.sql
 cd ../../../../
+sudo mysql -h localhost -u$DBUSER -p$DBPASS < ./hustoj/trunk/install/db.sql
 
 #create work dir set default conf
 
