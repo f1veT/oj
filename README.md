@@ -21,4 +21,4 @@ cd /home</br>
 git clone https://github.com/knickersgod/oj.git</br>
 cd oj</br>
 chmod -R 777 *</br>
-./install.sh</br>
+./install_centos.sh</br>
