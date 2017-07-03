@@ -14,7 +14,9 @@ chenge your /home/judge/etc/judge.conf </br>
 adminuser and passwd for your user</br>
 </br></br></br>
 说下安装过程命令（在腾讯云centos6.5）：</br>
-yum install git</br>
+yum -y install git mysql-server mysql-devel</br>
+sudo service mysqld start</br>
+sudo mysqladmin -u root password root</br>
 git clone https://github.com/knickersgod/oj.git</br>
 cd oj</br>
 chmod -R 777 *</br>
