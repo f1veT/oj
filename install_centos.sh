@@ -50,7 +50,7 @@ rm /usr/bin/sim_cc /usr/bin/sim_rb /usr/bin/sim_sh
 ln -s /usr/bin/sim_c /usr/bin/sim_cc
 #install web and db
 cd ../../../../
-sudo cp -R ./oj/hustoj/trunk/web $WEBBASE/JudgeOnline
+sudo cp -R ./hustoj/trunk/web $WEBBASE/JudgeOnline
 sudo chmod -R 771 $WEBBASE/JudgeOnline
 sudo chown -R $APACHEUSER $WEBBASE/JudgeOnline
 sudo mysql -h localhost -u$DBUSER -p$DBPASS < ./hustoj/trunk/install/db.sql
